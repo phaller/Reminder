@@ -7,8 +7,8 @@
 /build
 /captures
 .externalNativeBuild
-app/build
 .idea
 gradle
 gradlew
 gradlew.bat
+*~
