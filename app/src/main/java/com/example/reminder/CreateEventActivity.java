@@ -1,9 +1,11 @@
 package com.example.reminder;
 
-import android.app.DialogFragment;
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class CreateEventActivity extends AppCompatActivity {
 
@@ -20,6 +22,10 @@ public class CreateEventActivity extends AppCompatActivity {
     }
 
     public void onCreate(View view) {
-
+        TextView tv = (TextView) findViewById(R.id.selectedDateTextView);
+        Intent data = new Intent();
+        data.putExtra("date", tv.getText());
+        setResult(Activity.RESULT_OK, data);
+        finish();
     }
 }
